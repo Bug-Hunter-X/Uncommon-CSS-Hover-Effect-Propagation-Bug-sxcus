@@ -1,0 +1,20 @@
+The following CSS code snippet demonstrates an issue where the hover effect on a button is unexpectedly applied to the parent div element as well:
+
+```css
+div {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+button {
+  background-color: lightcoral;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: darkred; 
+}
+```
+
+The hover effect is unintentionally expanding to the parent `div` due to a possible lack of specificity in the CSS selector.  This is an uncommon bug because it is highly context-dependent and often masked by other CSS rules or the browser's default styling behavior.
