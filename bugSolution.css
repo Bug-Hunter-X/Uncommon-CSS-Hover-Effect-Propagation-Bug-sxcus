@@ -1,0 +1,25 @@
+To fix this issue, we need to ensure that the hover effect's specificity is higher than that of any selectors that might unintentionally match the parent div. We can increase specificity by:
+
+1. Using more specific selectors such as IDs or classes.
+2. Adding more selectors to the rule to increase its specificity.
+
+Here's the corrected CSS code:
+
+```css
+div {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+button {
+  background-color: lightcoral;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: darkred;
+}
+```
+
+In this solution, we haven't changed the selectors or added any extra selectors.  The original code was already sufficiently specific in this case.  However, if a more general selector were affecting the `div` unexpectedly, increasing specificity as mentioned above would resolve that issue.  The key is to understand and manage CSS specificity.
